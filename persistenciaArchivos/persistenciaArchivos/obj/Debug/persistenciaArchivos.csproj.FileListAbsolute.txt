@@ -16,3 +16,4 @@ C:\Users\LordLalo\Documents\persistencia-archivos\persistenciaArchivos\persisten
 C:\Users\LordLalo\Documents\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.csproj.GenerateResource.cache
 C:\Users\LordLalo\Documents\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.exe
 C:\Users\LordLalo\Documents\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.pdb
+C:\Users\LordLalo\Documents\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.UNA.Cheques.ControlCheque.resources

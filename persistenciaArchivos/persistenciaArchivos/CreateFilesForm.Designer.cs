@@ -43,6 +43,14 @@
             this.CrearArchivoButton = new System.Windows.Forms.Button();
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.UpsertPanel = new System.Windows.Forms.Panel();
+            this.MonedaTxt = new System.Windows.Forms.TextBox();
+            this.MonedaLabel = new System.Windows.Forms.Label();
+            this.institucionFincieraLabel = new System.Windows.Forms.Label();
+            this.InstitucionFinancieraTxt = new System.Windows.Forms.TextBox();
+            this.FechaLabel = new System.Windows.Forms.Label();
+            this.FechaDataPicker = new System.Windows.Forms.DateTimePicker();
+            this.ReceptorLabel = new System.Windows.Forms.Label();
+            this.ReceptorTxt = new System.Windows.Forms.TextBox();
             this.MontoLabel = new System.Windows.Forms.Label();
             this.MontoTextBox = new System.Windows.Forms.TextBox();
             this.DescripcionLlabel = new System.Windows.Forms.Label();
@@ -57,14 +65,7 @@
             this.InformacionRutaLabel = new System.Windows.Forms.Label();
             this.BorrarRenglonButton = new System.Windows.Forms.Button();
             this.InformationProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ReceptorLabel = new System.Windows.Forms.Label();
-            this.ReceptorTxt = new System.Windows.Forms.TextBox();
-            this.FechaDataPicker = new System.Windows.Forms.DateTimePicker();
-            this.FechaLabel = new System.Windows.Forms.Label();
-            this.institucionFincieraLabel = new System.Windows.Forms.Label();
-            this.InstitucionFinancieraTxt = new System.Windows.Forms.TextBox();
-            this.MonedaLabel = new System.Windows.Forms.Label();
-            this.MonedaTxt = new System.Windows.Forms.TextBox();
+            this.SigBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ChequesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.UpsertPanel.SuspendLayout();
@@ -90,6 +91,7 @@
             this.ChequesDataGridView.ReadOnly = true;
             this.ChequesDataGridView.Size = new System.Drawing.Size(651, 171);
             this.ChequesDataGridView.TabIndex = 2;
+            this.ChequesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ChequesDataGridView_CellContentClick);
             // 
             // EmisorColumn
             // 
@@ -189,6 +191,74 @@
             this.UpsertPanel.Name = "UpsertPanel";
             this.UpsertPanel.Size = new System.Drawing.Size(251, 428);
             this.UpsertPanel.TabIndex = 12;
+            // 
+            // MonedaTxt
+            // 
+            this.MonedaTxt.Location = new System.Drawing.Point(21, 275);
+            this.MonedaTxt.Name = "MonedaTxt";
+            this.MonedaTxt.Size = new System.Drawing.Size(207, 20);
+            this.MonedaTxt.TabIndex = 28;
+            // 
+            // MonedaLabel
+            // 
+            this.MonedaLabel.AutoSize = true;
+            this.MonedaLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.MonedaLabel.Location = new System.Drawing.Point(24, 259);
+            this.MonedaLabel.Name = "MonedaLabel";
+            this.MonedaLabel.Size = new System.Drawing.Size(46, 13);
+            this.MonedaLabel.TabIndex = 27;
+            this.MonedaLabel.Text = "Modena";
+            // 
+            // institucionFincieraLabel
+            // 
+            this.institucionFincieraLabel.AutoSize = true;
+            this.institucionFincieraLabel.ForeColor = System.Drawing.Color.White;
+            this.institucionFincieraLabel.Location = new System.Drawing.Point(18, 216);
+            this.institucionFincieraLabel.Name = "institucionFincieraLabel";
+            this.institucionFincieraLabel.Size = new System.Drawing.Size(92, 13);
+            this.institucionFincieraLabel.TabIndex = 26;
+            this.institucionFincieraLabel.Text = "InstitucionFinciera";
+            // 
+            // InstitucionFinancieraTxt
+            // 
+            this.InstitucionFinancieraTxt.Location = new System.Drawing.Point(21, 232);
+            this.InstitucionFinancieraTxt.Name = "InstitucionFinancieraTxt";
+            this.InstitucionFinancieraTxt.Size = new System.Drawing.Size(205, 20);
+            this.InstitucionFinancieraTxt.TabIndex = 25;
+            // 
+            // FechaLabel
+            // 
+            this.FechaLabel.AutoSize = true;
+            this.FechaLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.FechaLabel.Location = new System.Drawing.Point(21, 93);
+            this.FechaLabel.Name = "FechaLabel";
+            this.FechaLabel.Size = new System.Drawing.Size(37, 13);
+            this.FechaLabel.TabIndex = 24;
+            this.FechaLabel.Text = "Fecha";
+            // 
+            // FechaDataPicker
+            // 
+            this.FechaDataPicker.Location = new System.Drawing.Point(21, 112);
+            this.FechaDataPicker.Name = "FechaDataPicker";
+            this.FechaDataPicker.Size = new System.Drawing.Size(200, 20);
+            this.FechaDataPicker.TabIndex = 23;
+            // 
+            // ReceptorLabel
+            // 
+            this.ReceptorLabel.AutoSize = true;
+            this.ReceptorLabel.ForeColor = System.Drawing.Color.White;
+            this.ReceptorLabel.Location = new System.Drawing.Point(18, 51);
+            this.ReceptorLabel.Name = "ReceptorLabel";
+            this.ReceptorLabel.Size = new System.Drawing.Size(135, 13);
+            this.ReceptorLabel.TabIndex = 22;
+            this.ReceptorLabel.Text = "Receptor(min 3 caractéres)";
+            // 
+            // ReceptorTxt
+            // 
+            this.ReceptorTxt.Location = new System.Drawing.Point(21, 67);
+            this.ReceptorTxt.Name = "ReceptorTxt";
+            this.ReceptorTxt.Size = new System.Drawing.Size(205, 20);
+            this.ReceptorTxt.TabIndex = 21;
             // 
             // MontoLabel
             // 
@@ -316,73 +386,15 @@
             this.InformationProvider.ContainerControl = this;
             this.InformationProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("InformationProvider.Icon")));
             // 
-            // ReceptorLabel
+            // SigBtn
             // 
-            this.ReceptorLabel.AutoSize = true;
-            this.ReceptorLabel.ForeColor = System.Drawing.Color.White;
-            this.ReceptorLabel.Location = new System.Drawing.Point(18, 51);
-            this.ReceptorLabel.Name = "ReceptorLabel";
-            this.ReceptorLabel.Size = new System.Drawing.Size(135, 13);
-            this.ReceptorLabel.TabIndex = 22;
-            this.ReceptorLabel.Text = "Receptor(min 3 caractéres)";
-            // 
-            // ReceptorTxt
-            // 
-            this.ReceptorTxt.Location = new System.Drawing.Point(21, 67);
-            this.ReceptorTxt.Name = "ReceptorTxt";
-            this.ReceptorTxt.Size = new System.Drawing.Size(205, 20);
-            this.ReceptorTxt.TabIndex = 21;
-            // 
-            // FechaDataPicker
-            // 
-            this.FechaDataPicker.Location = new System.Drawing.Point(21, 112);
-            this.FechaDataPicker.Name = "FechaDataPicker";
-            this.FechaDataPicker.Size = new System.Drawing.Size(200, 20);
-            this.FechaDataPicker.TabIndex = 23;
-            // 
-            // FechaLabel
-            // 
-            this.FechaLabel.AutoSize = true;
-            this.FechaLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.FechaLabel.Location = new System.Drawing.Point(21, 93);
-            this.FechaLabel.Name = "FechaLabel";
-            this.FechaLabel.Size = new System.Drawing.Size(37, 13);
-            this.FechaLabel.TabIndex = 24;
-            this.FechaLabel.Text = "Fecha";
-            // 
-            // institucionFincieraLabel
-            // 
-            this.institucionFincieraLabel.AutoSize = true;
-            this.institucionFincieraLabel.ForeColor = System.Drawing.Color.White;
-            this.institucionFincieraLabel.Location = new System.Drawing.Point(18, 216);
-            this.institucionFincieraLabel.Name = "institucionFincieraLabel";
-            this.institucionFincieraLabel.Size = new System.Drawing.Size(92, 13);
-            this.institucionFincieraLabel.TabIndex = 26;
-            this.institucionFincieraLabel.Text = "InstitucionFinciera";
-            // 
-            // InstitucionFinancieraTxt
-            // 
-            this.InstitucionFinancieraTxt.Location = new System.Drawing.Point(21, 232);
-            this.InstitucionFinancieraTxt.Name = "InstitucionFinancieraTxt";
-            this.InstitucionFinancieraTxt.Size = new System.Drawing.Size(205, 20);
-            this.InstitucionFinancieraTxt.TabIndex = 25;
-            // 
-            // MonedaLabel
-            // 
-            this.MonedaLabel.AutoSize = true;
-            this.MonedaLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.MonedaLabel.Location = new System.Drawing.Point(24, 259);
-            this.MonedaLabel.Name = "MonedaLabel";
-            this.MonedaLabel.Size = new System.Drawing.Size(46, 13);
-            this.MonedaLabel.TabIndex = 27;
-            this.MonedaLabel.Text = "Modena";
-            // 
-            // MonedaTxt
-            // 
-            this.MonedaTxt.Location = new System.Drawing.Point(21, 275);
-            this.MonedaTxt.Name = "MonedaTxt";
-            this.MonedaTxt.Size = new System.Drawing.Size(207, 20);
-            this.MonedaTxt.TabIndex = 28;
+            this.SigBtn.Location = new System.Drawing.Point(416, 331);
+            this.SigBtn.Name = "SigBtn";
+            this.SigBtn.Size = new System.Drawing.Size(75, 23);
+            this.SigBtn.TabIndex = 17;
+            this.SigBtn.Text = "Siguiente";
+            this.SigBtn.UseVisualStyleBackColor = true;
+            this.SigBtn.Click += new System.EventHandler(this.SigBtn_Click);
             // 
             // CreateFilesForm
             // 
@@ -390,6 +402,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(913, 440);
+            this.Controls.Add(this.SigBtn);
             this.Controls.Add(this.InformacionRutaLabel);
             this.Controls.Add(this.BorrarRenglonButton);
             this.Controls.Add(this.CerrarButton);
@@ -448,6 +461,7 @@
         private System.Windows.Forms.DateTimePicker FechaDataPicker;
         private System.Windows.Forms.Label ReceptorLabel;
         private System.Windows.Forms.TextBox ReceptorTxt;
+        private System.Windows.Forms.Button SigBtn;
     }
 }
 

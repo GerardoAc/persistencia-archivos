@@ -219,5 +219,16 @@ namespace persistenciaArchivos
         {
 
         }
+
+        private void SigBtn_Click(object sender, EventArgs e)
+        {
+            ControlCheque con = new ControlCheque();
+            con.ShowDialog();
+        }
+
+        private void ChequesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
